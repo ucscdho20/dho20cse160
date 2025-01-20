@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Change a point color</title>
+  </head>
+
+  <body onload="main()">
+    <canvas id="webgl" width="400" height="400">
+      Please use a browser that supports "canvas"
+    </canvas>
+  
+    <div>
+      <label for="red">Red:</label>
+      <input type="range" id="red" min="0" max="1" step="0.01" value="1.0">
+      <label for="green">Green:</label>
+      <input type="range" id="green" min="0" max="1" step="0.01" value="0.0">
+      <label for="blue">Blue:</label>
+      <input type="range" id="blue" min="0" max="1" step="0.01" value="0.0">
+      <label for="size">Size:</label>
+      <input type="range" id="size" min="5" max="40" step="1" value="10.0">
+      <button onclick="clearCanvas()">Clear Canvas</button>
+    </div>
+    <div>
+      <button onclick="toggleRainbowMode()">Toggle Rainbow Mode</button>
+    </div>
+    <div>
+      <label>Color Preview:</label>
+      <div id="colorPreview" style="width: 100px; height: 50px; border: 1px solid black;"></div>
+    </div>
+
+    <div>
+      <button onclick="setDrawMode('point')">Draw Points</button>
+      <button onclick="setDrawMode('triangle')">Draw Triangles</button>
+      <button onclick="setDrawMode('circle')">Draw Circles</button>
+    </div>
+
+    <div>
+      <label for="segments">Segments:</label>
+      <input type="range" id="segments" min="3" max="100" step="1" value="30">
+    </div>
+    <div>
+      <button onclick="drawScene()">Draw Rubik's Cube on Table</button>
+    </div>    
+    <img src="IMG_4371.jpeg" alt="Drawing" width="300" height="200">
+
+    <script src="../lib/webgl-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+    <script src="asgn1.js"></script>
+  </body>
+</html>
