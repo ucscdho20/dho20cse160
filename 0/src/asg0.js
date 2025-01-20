@@ -38,11 +38,18 @@ function areaTriangle(v1, v2) {
     return area;
 }
 
+function clearCanvas(ctx) {
+    var canvas = ctx.canvas;
+    ctx.clearRect(-canvas.width / 2, -canvas.height / 2, canvas.width, canvas.height); // Clears the canvas
+    ctx.fillStyle = 'black';
+    ctx.fillRect(-canvas.width / 2, -canvas.height / 2, canvas.width, canvas.height); // Fill the entire canvas
+}
+
 function handleDrawEvent() {
     var canvas = document.getElementById('example');
     var ctx = canvas.getContext('2d');
 
-    ctx.clearRect(-canvas.width / 2, -canvas.height / 2, canvas.width, canvas.height);
+    clearCanvas(ctx)
 
     var v1x = parseFloat(document.getElementById('v1xInput').value);
     var v1y = parseFloat(document.getElementById('v1yInput').value);
@@ -60,7 +67,7 @@ function handleDrawOperationEvent() {
     var canvas = document.getElementById('example');
     var ctx = canvas.getContext('2d');
 
-    ctx.clearRect(-canvas.width / 2, -canvas.height / 2, canvas.width, canvas.height);
+    clearCanvas(ctx)
     handleDrawEvent()
 
     var operation = document.getElementById('operation').value;
