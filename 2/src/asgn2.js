@@ -443,12 +443,12 @@ function renderScene(){
     cylinderMatrix.rotate(90, 1, 0, 0);
     cylinderMatrix.translate(.5, -.4, -.55);
     cylinderMatrix.scale(0.425, girth + 1.0, 0.425);
-    cylinderMatrix.rotate(-Math.abs((Math.sin(g_seconds))) - eardegree/2 ,1,0,0);
+    cylinderMatrix.rotate(-Math.abs((Math.sin(g_seconds)))/2 ,1,0,0);
     drawCylinder(cylinderMatrix, [0.64, 0.51, 0.26, 1], 50);
 
     let cylinder2Matrix = new Matrix4(cylinderMatrix);
-    cylinder2Matrix.translate(0, -.25, 0);
-    cylinder2Matrix.scale(.99,.99,.99);
+    cylinder2Matrix.translate(0, -.1 - eardegree/100, 0);
+    cylinder2Matrix.scale(.99,.27,.99);
     drawCylinder(cylinder2Matrix, [0, 0, 0, 1], 50)
 
     let leftearMatrix = new Matrix4(headMatrix);
