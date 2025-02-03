@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Change a point color</title>
+  </head>
+
+  <body onload="main()">
+    <canvas id="webgl" width="400" height="400">
+      Please use a browser that supports "canvas"
+    </canvas>
+  
+    <div>
+      <label for="angle">Angle:</label>
+      <input type="range" id="angleSlider" min="-90" max="90" step="1" value="45">
+      <label for="ears">Ears:</label>
+      <input type="range" id="Earslider" min="0" max="10" step="1" value="0">
+      <label for="nose">Head:</label>
+      <input type="range" id="Noseslider" min="0" max="5" step="1" value="0">
+    </div>
+    <div>
+      Animation:
+      <button type="button" id = "animationOn">ON</button>
+      <button type="button" id = "animationOff">OFF</button>
+    </div>
+
+    <div id="fpsDisplay" style="position: absolute; top: 10px; left: 10px; color: white; background: black; padding: 5px; font-family: Arial, sans-serif;">
+      FPS: <span id="fpsValue">0</span>
+    </div>
+
+    <div>
+    </div>
+
+    <div>
+    </div>
+    <div>
+    </div>    
+
+    <script src="../lib/webgl-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+    <script src="../lib/cuon-matrix.js"></script>
+    <script src="asgn2.js"></script>
+  </body>
+</html>
