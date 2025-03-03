@@ -74,7 +74,7 @@ void main() {
         
         vec3 ambient = vec3(gl_FragColor) * 0.3;
         vec3 diffuse = vec3(gl_FragColor) * diff * 0.7 * u_lightColor;
-        vec3 specular = vec3(1.0) * spec * 0.5;
+        vec3 specular = vec3(1.0) * spec * 0.5 * u_lightColor;
         
         finalLighting += ambient + diffuse + specular;
     }
