@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Floor Wiper Deluxe</title>
+  </head>
+
+  <body onload="main()">
+    <canvas id="webgl" width="400" height="400">
+      Please use a browser that supports "canvas"
+    </canvas>
+
+    <h1>Wipe the floors</h1>
+    <h2>Use F to dump water and G to mop</h2>
+    <canvas id="minimap" width="80" height="80" style="position: absolute; top: 10px; left: 10px; background: black;"></canvas>
+    <div id="grass-count" style="position: absolute; top: 375px; left: 10px; background: white; padding: 5px; border-radius: 5px;">
+      Stains: <span id="grass-value">0</span>
+    </div>
+    <button onclick="toggleNormals(true)">Normals On</button>
+    <button onclick="toggleNormals(false)">Normals Off</button>
+    <p>Light X <input type="range" min="-250" max="250" value="0" class="slider" id="lightSlideX"></p>
+    <p>Light Y <input type="range" min="-250" max="250" value="250" class="slider" id="lightSlideY"></p>
+    <p>Light Z <input type="range" min="-250" max="250" value="-200" class="slider" id="lightSlideZ"></p>  
+    <button id="toggleLight">Toggle Light</button>
+    <button id="toggleSpotlight">Toggle Spotlight</button>
+    <input type="color" id="lightColorPicker" value="#ffffff">  
+    <script src="../lib/webgl-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+    <script src="../lib/cuon-matrix.js"></script>
+    <script src="world.js"></script>
+  </body>
+</html>
